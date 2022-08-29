@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="backdrop"></div>
+    <div class="container container-shadow-mode">
+        <div class="heading">
+            <img src="./images/CWServices_LOGO_1-1.png" alt="logo">
+        <button id="title-btn" class="title-btn btn">ABOUT THIS APP</button>
+        </div>
+        <div id="tdd_goal">
+            <button id="cancel-btn">CANCEL</button>
+            <p>
+                This app is for Technical Due Diligence (TDD) application. It aims to deliver a project from start to 
+                submission of report to client in one week's time, initially.   
+            </p> 
+        </div>
+        
+        <div class="asset-information visible" id="asset-information">
+            <div id="asset-works">
+              <p>This section above has to receive data from excel 
+                file and pick the item we want. The 3 line items are what i thought are necessary but this can still chnage.</p>
+            </div>
+          <h3>Asset Information</h3>
+          <h5>System:</h5>
+          <h5>Location:</h5>
+          <h5>Equipment Designation:</h5>
+          <button id="asset-info-btn" class="btn asset-info-btn">click to see development path for this section</button>
+        </div>
+
+        <div class="assessment-photos" id="assessment-photos">
+          <div id="assessment-download" class="visible">
+            <p>This section will receive photo while taking it live. Hopefully can be like any messaging app that you can attached a newly taken photo or attached a photo from the file.</p>
+          </div>
+            <h3>Assessment by Photos</h3>
+            <div class="assessment-photos-1">
+                <h5>Photo Of Asset Tag</h5>
+                <input class="dave">
+            </div>
+            <div class="assessment-photos-1">
+                <h5>Photo Of Asset</h5>
+                <input class="notdave">
+            </div>
+            <button id="photo-info-btn" class="btn assessment-info-btn">click to see development path for this section</button>
+        </div>
+        <form>
+          <label>Severity</label>
+          <input list="severity" placeholder="Severity">
+          <datalist id="severity">
+            <option value="1 Severe">
+            <option value="2 Serious">
+            <option value="3 Minor">
+          </datalist>
+          <label>Intensity</label>
+          <input list="intensity" placeholder="Intensity">
+          <datalist id="intensity">
+            <option value="Intensity 1">
+            <option value="Intensity 2">
+            <option value="Intensity 3">
+          </datalist>
+          <label>Extent</label>
+          <input list="extent" placeholder="Extent">
+          <datalist id="extent">
+            <option value="Extent 1">
+            <option value="Extent 2">
+            <option value="Extent 3">
+            <option value="Extent 4">
+            <option value="Extent 5">
+              <!-- i can use the logic of TIC TAC TOE by Tom Bowden Udemy Course to carry out the formula -->
+          </datalist>
+          <button id="form-info-btn" class="btn form-btn">click to see development path for this section</button>
+        </form>
+        <div class="photo-of-defects" id="photo-of-defects">
+          <p>Photo Of Defect (If any)</p>
+          <input>
+        </div>
+        <div class="conditional-assessment" id="conditional-assessment">
+          <h4>Condition Score</h4>
+          <div class='condition-score' id="condition-score">[Score and remarks goes here]</div>
+          <input type="text">
+          <button id="condition-info-btn" class="btn condition-btn">click to see development path for this section</button>
+        </div>
+        <button class="btn-submit" type="submit">SUBMIT</button>
+        <footer>&copyDavid Onquit-Web Developer</footer>
+      </div>
+      <script src="main.js"></script>
+</body>
+</html>

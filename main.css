@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h3,
+h4,
+h5 {
+  font-weight: 400; }
+
+.btn {
+  font-size: .5rem;
+  cursor: pointer;
+  color: #252323;
+  background: #f8f7f7;
+  box-shadow: 3px 3px 6px #e4e3e3, -3px -3px 6px #a6a2a2;
+  border: none;
+  border-radius: 3px;
+  padding: 5px; }
+
+body {
+  background-color: #ccc9c9;
+  max-width: 428px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px; }
+  body #backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    display: none; }
+  body #backdrop.visible {
+    display: block;
+    pointer-events: all; }
+  body .container {
+    background-color: #fff;
+    max-width: 100%;
+    height: 100vhNpm;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px; }
+    body .container #tdd_goal {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      background-color: #1a1919;
+      color: #f0e9e9;
+      display: none;
+      padding: 20px;
+      border-radius: 15px;
+      line-height: 1.3;
+      flex-direction: column;
+      font-size: .8rem;
+      width: 250px;
+      margin: 0 auto;
+      box-shadow: 1px 1px 6px #e4e3e3, -1px -1px 6px #a6a2a2; }
+    body .container #tdd_goal.visibletoo {
+      display: flex;
+      z-index: 10; }
+    body .container #cancel-btn {
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      width: 40%;
+      border-radius: 15px;
+      font-size: 12px;
+      background-color: #fff;
+      cursor: pointer; }
+    body .container .heading {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between; }
+      body .container .heading img {
+        width: 50%;
+        padding: 10px; }
+      body .container .heading .title-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 70px; }
+    body .container .asset-information {
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      position: relative; }
+      body .container .asset-information #asset-works {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 90px;
+        z-index: 10;
+        background-color: #f6f0f0;
+        border-radius: 10px;
+        padding: 10px; }
+        body .container .asset-information #asset-works .asset-work-text {
+          font-size: .8rem; }
+      body .container .asset-information #asset-works.visible {
+        display: block; }
+      body .container .asset-information .asset-info-btn {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        height: 60px;
+        width: 80px; }
+    body .container .assessment-photos {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      flex-grow: 1;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+      border-radius: 10px;
+      background: #f8f7f7;
+      box-shadow: 5px 5px 10px #e4e3e3, -5px -5px 10px #ffffff;
+      padding: 10px; }
+      body .container .assessment-photos .assessment-info-btn {
+        position: absolute;
+        bottom: 2px;
+        left: 10px;
+        height: 60px;
+        width: 80px; }
+      body .container .assessment-photos h3 {
+        display: flex;
+        width: min-content;
+        padding-right: 10px;
+        font-size: .7rem; }
+      body .container .assessment-photos #assessment-download {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 15px;
+        width: 75%;
+        z-index: 10;
+        background-color: #f99595;
+        border-radius: 10px;
+        padding: 10px; }
+      body .container .assessment-photos #assessment-download.visible {
+        display: block; }
+      body .container .assessment-photos .assessment-photos-1 {
+        display: flex;
+        flex-direction: column; }
+        body .container .assessment-photos .assessment-photos-1 h5 {
+          padding-top: 5px;
+          font-size: .7rem; }
+        body .container .assessment-photos .assessment-photos-1 input.dave,
+        body .container .assessment-photos .assessment-photos-1 input.notdave {
+          margin: 1px;
+          margin-top: 3px;
+          background-image: url(images/ThermoFisher.jpeg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          max-width: 130px;
+          height: 90px;
+          border-radius: 5px;
+          box-shadow: 1px 1px 3px #2c2a2a, -1px -1px 3px #2c2a2a; }
+        body .container .assessment-photos .assessment-photos-1 input.notdave {
+          background-image: url("https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGx1bWJpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"); }
+    body .container form {
+      margin-top: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 10px;
+      background: #f8f7f7;
+      box-shadow: 5px 5px 10px #e4e3e3, -5px -5px 10px #ffffff; }
+      body .container form input {
+        width: 50%;
+        height: 25px;
+        outline: none;
+        border: none;
+        background-color: #e1dede; }
+      body .container form label {
+        padding-top: 5px; }
+      body .container form .form-btn {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        height: 60px;
+        width: 80px; }
+    body .container .photo-of-defects {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      background: #f8f7f7;
+      box-shadow: 5px 5px 10px #e4e3e3, -5px -5px 10px #ffffff; }
+      body .container .photo-of-defects p {
+        padding-bottom: 5px; }
+      body .container .photo-of-defects input {
+        background-image: url(images/Volvo.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 160px;
+        height: 90px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px #2c2a2a, -1px -2px 5px #2c2a2a; }
+    body .container .conditional-assessment {
+      position: relative;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border-radius: 10px;
+      background: #f8f7f7;
+      box-shadow: 5px 5px 10px #e4e3e3, -5px -5px 10px #ffffff; }
+      body .container .conditional-assessment .condition-score span {
+        font-size: .8rem;
+        font-style: italic;
+        color: #413e3e; }
+      body .container .conditional-assessment .condition-btn {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        height: 60px;
+        width: 80px; }
+    body .container button.btn-submit {
+      background-color: #4649f0;
+      margin: 5px 0;
+      padding: 5px 20px;
+      border: none;
+      border-radius: 5px;
+      color: white; }
+    body .container footer {
+      background-color: #141414;
+      color: #aeabab;
+      padding: 10px 0 10px 20px;
+      font-size: .7rem; }
+  body .container-shadow-mode {
+    position: relative; }
